@@ -5,15 +5,20 @@ Ext.define("EveryHomeKitDevice.view.main.List", {
   extend: "Ext.grid.Grid",
   xtype: "mainlist",
 
-  requires: ["EveryHomeKitDevice.store.Personnel"],
+  requires: ["EveryHomeKitDevice.store.Devices", "Ext.field.Toggle"],
 
-  title: "Personnel",
+  title: "Devices",
 
   store: {
-    type: "personnel",
+    type: "devices",
   },
-
   columns: [
+    {
+      xtype: "rownumberer",
+    },
+    { text: "Accessories", dataIndex: "accessories", flex: 1 },
+  ],
+  /*columns: [
     {
       text: "Scenes",
       dataIndex: "name",
@@ -33,7 +38,7 @@ Ext.define("EveryHomeKitDevice.view.main.List", {
       width: 150,
     },
   ],
-
+*/
   listeners: {
     select: "onItemSelected",
   },

@@ -18,41 +18,109 @@ Ext.define("EveryHomeKitDevice.view.main.Main", {
     },
   },
 
-  tabBarPosition: "bottom",
+  tabBarPosition: "top",
 
   items: [
     // TODO - Replace the content of this view to suit the needs of your application.
     {
-      title: "Home",
-      iconCls: "x-fa fa-home",
+      title: "Hallway",
+      // iconCls: "x-fa fa-home",
       layout: "fit",
       // The following grid shares a store with the classic version's grid as well!
       items: [
         {
           xtype: "mainlist",
+          store: {
+            type: "devices",
+            filters: [
+              {
+                property: "room",
+                value: "Hallway",
+              },
+            ],
+          },
         },
       ],
     },
     {
-      title: "Users",
-      iconCls: "x-fa fa-user",
-      bind: {
-        html: "{loremIpsum}",
-      },
+      title: "Living Room",
+
+      layout: "fit",
+      // The following grid shares a store with the classic version's grid as well!
+      items: [
+        {
+          xtype: "mainlist",
+          store: {
+            type: "devices",
+            filters: [
+              {
+                property: "room",
+                value: "Living Room",
+              },
+            ],
+          },
+        },
+      ],
     },
     {
-      title: "Groups",
-      iconCls: "x-fa fa-users",
-      bind: {
-        html: "{loremIpsum}",
-      },
+      title: "Kitchen",
+
+      layout: "fit",
+      // The following grid shares a store with the classic version's grid as well!
+      items: [
+        {
+          xtype: "mainlist",
+          store: {
+            type: "devices",
+            filters: [
+              {
+                property: "room",
+                value: "Kitchen",
+              },
+            ],
+          },
+        },
+      ],
     },
     {
-      title: "Settings",
-      iconCls: "x-fa fa-cog",
-      bind: {
-        html: "{loremIpsum}",
-      },
+      title: "Bedroom",
+
+      layout: "fit",
+      // The following grid shares a store with the classic version's grid as well!
+      items: [
+        {
+          xtype: "mainlist",
+          store: {
+            type: "devices",
+            filters: [
+              {
+                property: "room",
+                value: "Bedroom",
+              },
+            ],
+          },
+        },
+      ],
+    },
+    {
+      title: "Upstairs",
+
+      layout: "fit",
+      // The following grid shares a store with the classic version's grid as well!
+      items: [
+        {
+          xtype: "mainlist",
+          store: {
+            type: "devices",
+            filters: [
+              {
+                property: "room",
+                value: "Upstairs",
+              },
+            ],
+          },
+        },
+      ],
     },
   ],
 });

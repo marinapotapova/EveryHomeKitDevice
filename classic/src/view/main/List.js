@@ -14,10 +14,7 @@ Ext.define("EveryHomeKitDevice.view.main.List", {
     //filters: [],
   },
 
-  columns: [
-    { text: "Accessories", dataIndex: "accessories", flex: 1 },
-    { text: "Status", dataIndex: "status", flex: 1 },
-  ],
+  columns: [{ text: "Accessories", dataIndex: "accessories", flex: 1 }],
 
   listeners: {
     select: "onItemSelected",

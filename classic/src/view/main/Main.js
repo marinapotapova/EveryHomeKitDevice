@@ -26,10 +26,6 @@ Ext.define("EveryHomeKitDevice.view.main.Main", {
   title: "Every HomeKit Device",
   ui: "navigation",
 
-  //tabBarHeaderPosition: 1,
-  //titleRotation: 0,
-  //tabRotation: 0,
-
   defaults: {
     bodyPadding: 20,
   },
@@ -37,7 +33,7 @@ Ext.define("EveryHomeKitDevice.view.main.Main", {
   items: [
     {
       title: "Hallway",
-      //iconCls: "fa-home",
+
       // The following grid shares a store with the classic version's grid as well!
       items: [
         {
@@ -56,7 +52,7 @@ Ext.define("EveryHomeKitDevice.view.main.Main", {
     },
     {
       title: "Living Room",
-      //iconCls: "fa-user",
+
       items: [
         {
           xtype: "mainlist",
@@ -92,7 +88,7 @@ Ext.define("EveryHomeKitDevice.view.main.Main", {
     },
     {
       title: "Bedroom",
-      //iconCls: "fa-cog",
+
       items: [
         {
           xtype: "mainlist",
